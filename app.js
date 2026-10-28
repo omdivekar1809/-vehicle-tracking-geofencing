@@ -165,7 +165,7 @@ if (typeof firebase === "undefined") {
       if (!d) return;
       const speed = d.speedKmph ?? d.speed ?? d.speedKmh ?? d.speed_kmh;
       document.getElementById("vehicleSpeed").textContent =
-        speed == null ? "--" : Number(speed).toFixed(1);
+        speed == null ? "0.0" : Number(speed).toFixed(1);
       const lat = d.latitude ?? d.lat;
       const lon = d.longitude ?? d.lon ?? d.lng;
       document.getElementById("vehicleLocation").textContent =
